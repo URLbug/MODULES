@@ -11,8 +11,9 @@ if(!defined("B_PROLOG_INCLUDED") || !B_PROLOG_INCLUDED)
 
 ?>
 
+222
 <h1><?=$arResult['TITLE'];?></h1>
-111
+
 <table class="table">
     <thead>
     <tr>

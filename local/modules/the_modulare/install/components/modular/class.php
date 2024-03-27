@@ -7,7 +7,7 @@ if (!defined('B_PROLOG_INCLUDED') || !B_PROLOG_INCLUDED)
 
 use Bitrix\Iblock\Component\Tools;
 
-class modularComponent extends CBitrixComponent
+class CModularComponent extends CBitrixComponent
 {
     /**
      * @var array|string[]
@@ -16,9 +16,8 @@ class modularComponent extends CBitrixComponent
         'ELEMENT_ID',
     ];
 
-    public function executeComponent()
+    public function executeComponent(): void
     {
-
         if($this->arParams['SEF_MODE'] === 'Y')
         {
             $componentPage = $this->sefMode();
@@ -90,18 +89,18 @@ class modularComponent extends CBitrixComponent
         if($b404)
         {
             $folder404 = str_replace(
-                "\\",
-                "/",
-                $this->arParams["SEF_FOLDER"]);
+                '\\',
+                '/',
+                $this->arParams['SEF_FOLDER']);
 
-            if ($folder404 !== "/")
+            if ($folder404 !== '/')
             {
-                $folder404 = "/" . trim($folder404, "/ \t\n\r\0\x0B") . "/";
+                $folder404 = '/' . trim($folder404, '/ \t\n\r\0\x0B') . '/';
             }
 
-            if (mb_substr($folder404, -1) === "/")
+            if (mb_substr($folder404, -1) === '/')
             {
-                $folder404 .= "index.php";
+                $folder404 .= 'index.php';
             }
 
             $cMain = new CMain();
@@ -109,11 +108,11 @@ class modularComponent extends CBitrixComponent
             if ($folder404 !== $cMain->GetCurPage(true))
             {
                 Tools::process404(
-                    ""
-                    ,($this->arParams["SET_STATUS_404"] === "Y")
-                    ,($this->arParams["SET_STATUS_404"] === "Y")
-                    ,($this->arParams["SHOW_404"] === "Y")
-                    ,$this->arParams["FILE_404"]
+                    '',
+                    ($this->arParams['SET_STATUS_404'] === 'Y'),
+                    ($this->arParams['SET_STATUS_404'] === 'Y'),
+                    ($this->arParams['SHOW_404'] === 'Y'),
+                    $this->arParams['FILE_404']
                 );
             }
         }
@@ -130,8 +129,6 @@ class modularComponent extends CBitrixComponent
             'URL_TEMPLATES' => $arUrlTemplates,
             'VARIABLES' => $arVariables,
             'ALIASES' => $arVariableAliases,
-            'TITLE' => $this->arParams['TITLE'],
-            'CASH_TIME' => $this->arParams['CASH_TIME'],
         ];
 
         return $componentPage;
@@ -176,8 +173,6 @@ class modularComponent extends CBitrixComponent
             ],
             'VARIABLES' => $arVariables,
             'ALIASES' => $arVariableAliases,
-            'TITLE' => $this->arParams['TITLE'],
-            'CASH_TIME' => $this->arParams['CASH_TIME'],
         ];
 
         return $componentPage;
