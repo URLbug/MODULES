@@ -13,7 +13,6 @@
 .section.php
 .top.menu.php
 .htaccess
-index.php
 urlrewrite.php
 bitrixsetup.php.tmp
 404.php
