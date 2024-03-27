@@ -1,0 +1,13 @@
+{
+  "name": "rui-carter/the_modulare",
+  "type": "bitrix-d7-module",
+  "extra": {
+    "installer-name": "The-Modulare",
+    "installer-paths": {
+      "local/modules/the_modulare/": ["type:bitrix-d7-module"]
+    }
+  },
+  "require": {
+    "composer/installers": "~1"
+  }
+}
