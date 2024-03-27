@@ -1,2 +1,18 @@
+### Template ###
+
 /.idea
 /bitrix
+/upload
+/local/templates
+
+################
+
+#### files #####
+
+.access.php
+.section.php
+.top.menu.php
+.htaccess
+index.php
+urlrewrite.php
+bitrixsetup.php.tmp

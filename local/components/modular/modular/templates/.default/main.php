@@ -9,6 +9,7 @@ if(!defined('B_PROLOG_INCLUDED') || !B_PROLOG_INCLUDED)
 /** @global CMain $APPLICATION */
 /** @var CBitrixComponent $component */
 
+
 $APPLICATION->IncludeComponent(
   'modular:modular.users',
   '',
