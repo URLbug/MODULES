@@ -11,8 +11,6 @@ $APPLICATION->SetTitle("users");
 		"TITLE" => "TEST",
 		"COMPONENT_TEMPLATE" => ".default",
 		"SEF_URL_TEMPLATES" => array(
-			"main" => "",
-			"section" => "",
 			"detail" => "#ELEMENT_ID#/",
 		)
 	),

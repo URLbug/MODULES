@@ -5,10 +5,13 @@ if(!defined('B_PROLOG_INCLUDED') || !B_PROLOG_INCLUDED)
     die();
 }
 
-$arComponentDescription = array(
-    'NAME' => GetMessage('MODULAR_USERS_NAME'),
-    'DESCRIPTION' => GetMessage('MODULAR_USERS_DESC'),
-    'PATH' => array(
-        "ID" => GetMessage("WISER_DES_NAME"),
-    ),
-);
+$arComponentDescription = [
+    'NAME' => GetMessage('MODULAR_DETAIL_NAME'),
+    'DESCRIPTION' => GetMessage('MODULAR_DETAIL_DESC'),
+    'PATH' => [
+        'ID' => 'modular',
+        'CHILD' => [
+            'ID' => 'modular.detail',
+        ],
+    ],
+];

@@ -1,9 +1,12 @@
 <?php
 
-if(!defined("B_PROLOG_INCLUDED") || !B_PROLOG_INCLUDED) die();
+if(!defined('B_PROLOG_INCLUDED') || !B_PROLOG_INCLUDED)
+{
+    die();
+}
 
-$arComponentParameters = array(
-    'PARAMETERS' => array(
+$arComponentParameters = [
+    'PARAMETERS' => [
         'CASH_TIME' => [
             'PARENT' => 'BASE',
             'NAME' => GetMessage('CASH_TIME_NAME'),
@@ -16,5 +19,5 @@ $arComponentParameters = array(
             'NAME' => GetMessage('TITLE_NAME'),
             'TYPE' => 'STRING',
         ],
-    ),
-);
+    ],
+];

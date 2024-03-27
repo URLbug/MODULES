@@ -1,9 +1,12 @@
 <?php
 
-if(!defined("B_PROLOG_INCLUDED") || !B_PROLOG_INCLUDED) die();
+if(!defined('B_PROLOG_INCLUDED') || !B_PROLOG_INCLUDED)
+{
+    die();
+}
 
-$arComponentParameters = array(
-    'PARAMETERS' => array(
+$arComponentParameters =[
+    'PARAMETERS' => [
         'CASH_TIME' => [
             'PARENT' => 'BASE',
             'NAME' => GetMessage('CASH_TIME_NAME'),
@@ -17,27 +20,15 @@ $arComponentParameters = array(
             'TYPE' => 'STRING',
         ],
 
-        "VARIABLE_ALIASES" => [
-            "SECTION_ID" => ["NAME" => 'Индефикатор раздела'],
-            "ELEMENT_ID" => ["NAME" => 'Индефикатор страницы'],
+        'VARIABLE_ALIASES' => [
         ],
 
-        "SEF_MODE" => [
-            "main" => [
-                "NAME" => 'Главная страница',
-                "DEFAULT" => "",
-                "VARIABLES" => [],
-            ],
-            "section" => [
-                "NAME" => 'Раздел',
-                "DEFAULT" => "",
-                "VARIABLES" => ["SECTION_ID"],
-            ],
-            "detail" => [
-                "NAME" => 'Детальная страница',
-                "DEFAULT" => "#ELEMENT_ID#/",
-                "VARIABLES" => ["ELEMENT_ID", "SECTION_ID"],
+        'SEF_MODE' => [
+            'detail' => [
+                'NAME' => GetMessage('DETAIL_NAME'),
+                'DEFAULT' => '#ELEMENT_ID#/',
+                'VARIABLES' => ['ELEMENT_ID'],
             ],
         ],
-    ),
-);
+    ],
+];
