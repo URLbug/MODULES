@@ -7,7 +7,7 @@ if (!defined('B_PROLOG_INCLUDED') || !B_PROLOG_INCLUDED)
 
 use Bitrix\Iblock\Component\Tools;
 
-class CModularComponent extends CBitrixComponent
+class ModularComponent extends CBitrixComponent
 {
     /**
      * @var array|string[]

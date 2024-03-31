@@ -10,7 +10,6 @@ if(!defined("B_PROLOG_INCLUDED") || !B_PROLOG_INCLUDED)
  */
 
 ?>
-222
 <h1><?=$arResult['TITLE'];?></h1>
 
 <table class="table">
@@ -19,6 +18,7 @@ if(!defined("B_PROLOG_INCLUDED") || !B_PROLOG_INCLUDED)
         <th scope="col"><?=GetMessage('ID');?></th>
         <th scope="col"><?=GetMessage('NAME');?></th>
         <th scope="col"><?=GetMessage('DESC');?></th>
+        <th scope="col"><?=GetMessage('LINK');?></th>
     </tr>
     </thead>
     <tbody>
@@ -28,6 +28,7 @@ if(!defined("B_PROLOG_INCLUDED") || !B_PROLOG_INCLUDED)
             <td><?=$arGroup['ID']?></td>
             <td><?=$arGroup['NAME']?></td>
             <td><?=$arGroup['DESCRIPTION']?></td>
+            <td><a href="<?=$arGroup['LINK']?>"><?=GetMessage('LINK') . ' ' . $arGroup['ID']?></a></td>
         </tr>
     <?php endforeach;?>
 

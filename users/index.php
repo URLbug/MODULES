@@ -9,6 +9,6 @@ $APPLICATION->SetTitle("users");
 		"SEF_FOLDER" => "/users/",
 		"SEF_MODE" => "Y",
 		"SEF_URL_TEMPLATES" => Array("detail"=>"#ELEMENT_ID#/"),
-		"TITLE" => ""
+		"TITLE" => "TEST"
 	)
 );?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

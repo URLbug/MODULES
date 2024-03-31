@@ -10,8 +10,5 @@ $arComponentDescription = [
     'DESCRIPTION' => GetMessage('MODULAR_USERS_DESC'),
     'PATH' => [
         'ID' => 'modular',
-        'CHILD' => [
-            'ID' => 'modular.users',
-        ],
     ],
 ];

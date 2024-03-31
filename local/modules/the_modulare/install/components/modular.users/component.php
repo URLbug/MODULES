@@ -7,6 +7,7 @@ if(!defined("B_PROLOG_INCLUDED") || !B_PROLOG_INCLUDED)
 
 /**
  * @var array $arParams
+ * @var array $arResult
  * @var CUser $USER
  * @global CMain $APPLICATION
  */
@@ -49,6 +50,15 @@ if(
     {
         while($arGroup = $arGroups->Fetch())
         {
+            if(isset($arParams['LINKS']))
+            {
+                $arGroup['LINK'] = str_replace(
+                    '#ELEMENT_ID#',
+                    $arGroup['ID'],
+                    $arParams['LINKS'],
+                );
+            }
+
             $arUsersGroups[] = $arGroup;
         }
     }

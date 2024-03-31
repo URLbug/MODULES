@@ -19,5 +19,11 @@ $arComponentParameters = [
             'NAME' => GetMessage('TITLE_NAME'),
             'TYPE' => 'STRING',
         ],
+
+        'LINKS' => [
+            'PARENT' => 'BASE',
+            'NAME' => 'Ссылки',
+            'TYPE' => 'STRING',
+        ]
     ],
 ];

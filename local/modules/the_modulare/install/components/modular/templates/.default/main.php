@@ -13,10 +13,11 @@ $this->setFrameMode(true);
 
 $APPLICATION->IncludeComponent(
     'modular:modular.users',
-    '',
+    'super_default',
     [
         'CASH_TIME' => $arParams['CASH_TIME'],
         'TITLE' => $arParams['TITLE'],
+        'LINKS' => $arResult['FOLDER'].$arResult['URL_TEMPLATES']['detail'],
     ],
     $component,
     ['HIDE_ICONS' => 'Y']

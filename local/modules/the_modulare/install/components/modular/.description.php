@@ -11,5 +11,6 @@ $arComponentDescription = [
     'DESCRIPTION' => GetMessage('MODULAR_DESC'),
     'PATH' => [
         'ID' => 'modular',
+        'NAME' => GetMessage('MODULAR_NAME_PATH'),
     ],
 ];

@@ -10,7 +10,6 @@ if(!defined("B_PROLOG_INCLUDED") || !B_PROLOG_INCLUDED)
  */
 
 ?>
-
 <h1><?=$arResult['TITLE'];?></h1>
 
 <table class="table">
