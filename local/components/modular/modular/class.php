@@ -27,17 +27,6 @@ class ModularComponent extends CBitrixComponent
             $componentPage = $this->noSefMode();
         }
 
-        //Отдать 404 статус если не найден шаблон
-        if (!$componentPage) {
-            Tools::process404(
-                $this->arParams['MESSAGE_404'],
-                ($this->arParams['SET_STATUS_404'] === 'Y'),
-                ($this->arParams['SET_STATUS_404'] === 'Y'),
-                ($this->arParams['SHOW_404'] === 'Y'),
-                $this->arParams['FILE_404']
-            );
-        }
-
         $this->IncludeComponentTemplate($componentPage);
     }
 
@@ -136,12 +125,11 @@ class ModularComponent extends CBitrixComponent
 
     protected function noSefMode(): string
     {
-        $arDefaultVariableAliases = [];
+        $arDefaultVariableAliases404 = [];
 
         $arVariableAliases = CComponentEngine::makeComponentVariableAliases(
-            $arDefaultVariableAliases,
-            $this->arParams['VARIABLE_ALIASES']
-        );
+            $arDefaultVariableAliases404,
+            $this->arParams["VARIABLE_ALIASES"]);
 
         CComponentEngine::initComponentVariables(
             false,
@@ -169,7 +157,7 @@ class ModularComponent extends CBitrixComponent
             'FOLDER' => '',
             'URL_TEMPLATES' =>[
                 'main' => htmlspecialcharsbx($cMain->GetCurPage()),
-                'detail' => htmlspecialcharsbx($cMain->GetCurPage().'?'.$arVariableAliases['ELEMENT_ID'].'=#ELEMENT_ID#'),
+                'detail' => htmlspecialcharsbx($cMain->GetCurPage().'?'.'ELEMENT_ID'.'=#ELEMENT_ID#'),
             ],
             'VARIABLES' => $arVariables,
             'ALIASES' => $arVariableAliases,
